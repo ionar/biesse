@@ -13,7 +13,7 @@ require 'nokogiri'
 require 'colorize'
 
 #Abre arquivo
-arquivo = File.open("teste biesse.cutplanning")
+arquivo = File.open("TESTE CA.cutplanning")
 
 arquivo_csv = File.open('Biesse-export.csv', 'w')
 
@@ -31,7 +31,8 @@ conteudo_xml.xpath("//com.geeksystem.cutplanning.cutplan.material.program[@iswas
   program.children.each do |cut|
 		cut.xpath("com.geeksystem.cutplanning.cutplan.material.program.cut.data[@template='4']").each do |data|
 			puts "CORTE".colorize(:color => :white, :background => :green) 
-			data.xpath("
+=begin
+				data.xpath("
 				com.geeksystem.cutplanning.cutplan.material.program.cut.data.field[@name='34']|
 				com.geeksystem.cutplanning.cutplan.material.program.cut.data.field[@name='42']|
 				com.geeksystem.cutplanning.cutplan.material.program.cut.data.field[@name='39']|
@@ -39,14 +40,62 @@ conteudo_xml.xpath("//com.geeksystem.cutplanning.cutplan.material.program[@iswas
 				com.geeksystem.cutplanning.cutplan.material.program.cut.data.field[@name='36']|
 				com.geeksystem.cutplanning.cutplan.material.program.cut.data.field[@name='37']|
 				com.geeksystem.cutplanning.cutplan.material.program.cut.data.field[@name='38']|
-				com.geeksystem.cutplanning.cutplan.material.program.cut.data.field[@name='43']|
-				com.geeksystem.cutplanning.cutplan.material.program.cut.data.field[@name='47']
+				com.geeksystem.cutplanning.cutplan.material.program.cut.data.field[@name='48']|
+				com.geeksystem.cutplanning.cutplan.material.program.cut.data.field[@name='40']|
+				com.geeksystem.cutplanning.cutplan.material.program.cut.data.field[@name='43']
 			").each do |field|
-					puts field['value']
-				
+=end	
+				#1
+				data.xpath("com.geeksystem.cutplanning.cutplan.material.program.cut.data.field[@name='34']").each do |field|
+					puts field			
 					arquivo_csv.print field['value'] + ';'
-					#puts "----------------------------------"
-			end
+				end
+				#2
+				data.xpath("com.geeksystem.cutplanning.cutplan.material.program.cut.data.field[@name='42']").each do |field|
+					puts field			
+					arquivo_csv.print field['value'] + ';'
+				end
+				#3
+				data.xpath("com.geeksystem.cutplanning.cutplan.material.program.cut.data.field[@name='39']").each do |field|
+					puts field			
+					arquivo_csv.print field['value'] + ';'
+				end
+				#4
+				data.xpath("com.geeksystem.cutplanning.cutplan.material.program.cut.data.field[@name='35']").each do |field|
+					puts field			
+					arquivo_csv.print field['value'] + ';'
+				end
+				#5
+				data.xpath("com.geeksystem.cutplanning.cutplan.material.program.cut.data.field[@name='36']").each do |field|
+					puts field			
+					arquivo_csv.print field['value'] + ';'
+				end
+				#6
+				data.xpath("com.geeksystem.cutplanning.cutplan.material.program.cut.data.field[@name='37']").each do |field|
+					puts field			
+					arquivo_csv.print field['value'] + ';'
+				end
+				#7
+				data.xpath("com.geeksystem.cutplanning.cutplan.material.program.cut.data.field[@name='38']").each do |field|
+					puts field			
+					arquivo_csv.print field['value'] + ';'
+				end
+				#8
+				data.xpath("com.geeksystem.cutplanning.cutplan.material.program.cut.data.field[@name='48']").each do |field|
+					puts field			
+					arquivo_csv.print field['value'] + ';'
+				end
+				#9
+				data.xpath("com.geeksystem.cutplanning.cutplan.material.program.cut.data.field[@name='40']").each do |field|
+					puts field			
+					arquivo_csv.print field['value'] + ';'
+				end
+				#10
+				data.xpath("com.geeksystem.cutplanning.cutplan.material.program.cut.data.field[@name='43']").each do |field|
+					puts field			
+					arquivo_csv.print field['value']
+				end
+
 			arquivo_csv.print "\n"
 		end
   end
