@@ -8,9 +8,9 @@ require 'colorize'
 # Cria janela
 root = TkRoot.new { 
 	title "Imobal"
-	minsize(400,50)
-	maxsize(400,50)
-	geometry '400x50+300+40'
+	minsize(300,50)
+	maxsize(300,50)
+	geometry '300x50+300+40'
 	resizable = false, false
 }
 
