@@ -1,8 +1,6 @@
 #!/usr/bin/env ruby
 require 'tk'
 require 'nokogiri'
-#require 'active_support/core_ext/hash/conversions'
-#require 'awesome_print'
 require 'colorize'
 
 # Cria janela
