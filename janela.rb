@@ -5,7 +5,7 @@ require 'colorize'
 
 # Cria janela
 root = TkRoot.new { 
-	title "Imobal"
+	title "Cutplanning -> Biesse"
 	minsize(300,50)
 	maxsize(300,50)
 	geometry '300x50+300+40'
@@ -52,8 +52,8 @@ btn_abrir.command(
 		arquivos.to_a.each do |filename|
 			#puts filename
 			File.open(filename) do |file|
-				nome = File.basename(filename)
-				arquivo_csv = File.open(selected_directory + '/' + nome + '.BIESSE.csv', 'w')
+				nome = File.basename(filename, ".cutplanning")
+				arquivo_csv = File.open(selected_directory + '/' + nome + '.txt', 'w')
 				conteudo = file.read
 				conteudo_xml = Nokogiri::XML(conteudo)
 				conteudo_xml.xpath("//com.geeksystem.cutplanning.cutplan.material.program[@iswaste='false'][@quantity!='0'][@lenght>'2746.0'][@width>'1839.0']").each_with_index do |program, index|

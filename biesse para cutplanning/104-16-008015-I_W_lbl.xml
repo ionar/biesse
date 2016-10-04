@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CutList>
+	<Part id="P1" L="982.95" W="301.15" qMin="1" MatNo="1" Material="008.015-I" IDesc="A" InfoDraw_1="" JobNest="" ClientNest="" CabDesc="9005648" DrillInfo="008.015-I" EdgingInfo="V" CabCode="" CabInfo="" StackingLayout="" InsLam="" MatEdgeUp="" MatEdgeLo="" MatEdgeL="" MatEdgeR=""/>
+	<Part id="P2" L="1572.05" W="1830" qMin="1" MatNo="1" Material="008.015-I" IDesc="B" InfoDraw_1="" JobNest="" ClientNest="" CabDesc="9005649" DrillInfo="008.015-I" EdgingInfo="&lt;" CabCode="" CabInfo="" StackingLayout="" InsLam="" MatEdgeUp="" MatEdgeLo="" MatEdgeL="" MatEdgeR=""/>
+	<Board id="B1" L="2750" W="1830" MatNo="1" Thickness="15"/>
+	<Material id="1" Thickness="15" Code="008.015-I"/>
+	<Solution NPatterns="1">
+		<Pattern id="S1" BrdNo="B1" UL="275000.00" UW="183000.00" Rep="1" Draw_Layout=".104-16-008015-I\104-16-008015-I_1(1).emf" DescrSchema="104-16-008015-I_1(1).bpp" PartInSheet="Id A:  Qty:1&#xA;Id B:  Qty:1" Str="L(Y,1,2)"/>
+		<Piece N="1" L="982.95" W="301.15" Q="1">
+			<Pid id="P1"/>
+			<Sid id="S1"/>
+		</Piece>
+		<Piece N="2" L="1572.05" W="1830" Q="1">
+			<Pid id="P2"/>
+			<Sid id="S1"/>
+		</Piece>
+	</Solution>
+	<Labeling PrintPattern="0" PrintDrop="0" LabelLayout="LayoutRestos1"/>
+</CutList>
